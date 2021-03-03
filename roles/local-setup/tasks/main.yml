@@ -1,0 +1,41 @@
+---
+- name: install homebrew command line packages
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_cmd_packages }}"
+  tags: packages
+
+- name: install homebrew cask packages
+  community.general.homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ homebrew_cask_packages }}"
+  tags: packages
+
+- name: copy common nix configurations
+  ansible.builtin.copy: 
+    src: "{{ item }}"
+    dest: "$HOME/"
+  with_items: "{{ common_nix_configs }}"
+  tags: configs
+
+- name: copy macOS configurations
+  ansible.builtin.copy: 
+    src: "{{ item }}"
+    dest: "$HOME/"
+  with_items: "{{ macos_configs }}"
+  tags: configs
+
+- name: fix ZSH files to avoid compaudit warnings (see https://github.com/zsh-users/zsh-completions/issues/680)
+  ansible.builtin.shell: compaudit | xargs chmod g-w
+  args:
+    executable: /bin/zsh
+  tags: configs
+
+- name: start brew services
+  ansible.builtin.command: brew services restart "{{ item }}"
+  with_items:
+    - skhd
+    - yabai
+  tags: configs

@@ -1,0 +1,20 @@
+homebrew_cask_packages:
+- iterm2
+- scroll-reverser
+- itsycal
+- intellij-idea-ce
+
+homebrew_cmd_packages:
+- tmux
+- zplug
+- koekeishiya/formulae/yabai
+- koekeishiya/formulae/skhd
+
+common_nix_configs:
+- common/.tmux.conf
+- common/.vimrc
+- common/.zshrc
+
+macos_configs:
+- macos/.skhdrc
+- macos/.yabairc
