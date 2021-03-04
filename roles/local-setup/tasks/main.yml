@@ -33,6 +33,18 @@
     executable: /bin/zsh
   tags: configs
 
+- name: add all spaces required for yabai + skhd
+  ansible.builtin.script: macos/create_spaces.scpt
+  args:
+    executable: osascript
+  tags: spaces
+
+- name: Disable spaces MRU behavior
+  ansible.builtin.shell: |
+    defaults write com.apple.dock mru-spaces -bool false
+    killall Dock
+  tags: spaces
+
 - name: start brew services
   ansible.builtin.command: brew services restart "{{ item }}"
   with_items:
