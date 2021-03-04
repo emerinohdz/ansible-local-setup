@@ -39,7 +39,7 @@
     executable: osascript
   tags: spaces
 
-- name: Disable spaces MRU behavior
+- name: disable spaces MRU behavior
   ansible.builtin.shell: |
     defaults write com.apple.dock mru-spaces -bool false
     killall Dock

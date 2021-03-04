@@ -11,10 +11,10 @@ homebrew_cmd_packages:
 - koekeishiya/formulae/skhd
 
 common_nix_configs:
-- common/.tmux.conf
-- common/.vimrc
-- common/.zshrc
+- configs/common/.tmux.conf
+- configs/common/.vimrc
+- configs/common/.zshrc
 
 macos_configs:
-- macos/.skhdrc
-- macos/.yabairc
+- configs/macos/.skhdrc
+- configs/macos/.yabairc
