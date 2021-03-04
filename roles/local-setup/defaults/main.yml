@@ -18,3 +18,5 @@ common_nix_configs:
 macos_configs:
 - configs/macos/.skhdrc
 - configs/macos/.yabairc
+
+macos_create_spaces_script: create_spaces.scpt

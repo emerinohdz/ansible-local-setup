@@ -34,7 +34,7 @@
   tags: configs
 
 - name: add all spaces required for yabai + skhd
-  ansible.builtin.script: macos/create_spaces.scpt
+  ansible.builtin.script: "{{ macos_create_spaces_script }}"
   args:
     executable: osascript
   tags: spaces
