@@ -1,14 +1,14 @@
 .PHONY: install-requirements run-playbook
 
-default: run
+default: install-requirements run
 
 install-requirements:
 	ansible-galaxy install -r requirements.yml
 
-run: install-requirements
+run: 
 	ansible-playbook playbook.yml
 
-configs: install-requirements
+configs: 
 	ansible-playbook playbook.yml --tags configs
 
 # vim: autoindent noexpandtab tabstop=4 shiftwidth=4

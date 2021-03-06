@@ -26,12 +26,13 @@
     dest: "$HOME/"
   with_items: "{{ macos_configs }}"
   tags: configs
+  notify:
+  - restart brew services
 
 - name: fix ZSH files to avoid compaudit warnings (see https://github.com/zsh-users/zsh-completions/issues/680)
   ansible.builtin.shell: compaudit | xargs chmod g-w
   args:
     executable: /bin/zsh
-  tags: configs
 
 - name: add all spaces required for yabai + skhd
   ansible.builtin.script: "{{ macos_create_spaces_script }}"
@@ -44,10 +45,3 @@
     defaults write com.apple.dock mru-spaces -bool false
     killall Dock
   tags: spaces
-
-- name: start brew services
-  ansible.builtin.command: brew services restart "{{ item }}"
-  with_items:
-    - skhd
-    - yabai
-  tags: configs

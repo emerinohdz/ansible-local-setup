@@ -1,0 +1,6 @@
+---
+- name: restart brew services
+  ansible.builtin.command: brew services restart "{{ item }}"
+  with_items:
+    - skhd
+    - yabai
