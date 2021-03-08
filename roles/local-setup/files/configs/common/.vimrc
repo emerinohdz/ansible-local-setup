@@ -28,7 +28,7 @@ filetype on
 "autocmd FileType java set compiler=maven2 <CR>
 autocmd FileType C set makeprg=make <CR>
 autocmd FileType python set expandtab
-autocmd FileType tf set shiftwidth=2 tabstop=2 softtabstop=2 autoindent
+autocmd FileType tf set shiftwidth=2 tabstop=2 softtabstop=2 autoindent smarttab
 nmap <F9> :make <CR>
 "nmap <F11> :set makeprg=javac\ *.java <CR>
 "nmap <C-A> :cprev <CR>
