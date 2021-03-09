@@ -155,3 +155,11 @@ alt - e : yabai -m window --toggle split
 alt - p : yabai -m window --toggle sticky;\
           yabai -m window --toggle topmost;\
           yabai -m window --toggle pip
+
+# spotify controls
+# 0x2B = , | 0x2F = .
+# reference: https://github.com/koekeishiya/skhd/issues/1
+cmd + alt - 0x2B : osascript -e 'tell application "Spotify" to previous track';
+cmd + alt - 0x2F : osascript -e 'tell application "Spotify" to next track';
+shift + cmd + alt - 0x2B : osascript -e 'tell application "Spotify" to playpause';
+shift + cmd + alt - 0x2F : osascript -e 'tell application "Spotify" to playpause';
