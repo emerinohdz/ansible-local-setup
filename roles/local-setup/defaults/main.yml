@@ -2,6 +2,7 @@ homebrew_cask_packages:
 - iterm2
 - scroll-reverser
 - itsycal
+- spotify
 - intellij-idea-ce
 
 homebrew_cmd_packages:
