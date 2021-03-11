@@ -62,7 +62,11 @@ autocmd BufReadPost *
 \   exe "normal! g`\"" |
 \ endif
 
+" less syntax
 au BufNewFile,BufRead *.less set filetype=less
+
+" terraform syntax
+au BufNewFile,BufRead *.tf set syntax=yaml
 
 " Simple re-format for minified Javascript
 "command! UnMinify call UnMinify()
