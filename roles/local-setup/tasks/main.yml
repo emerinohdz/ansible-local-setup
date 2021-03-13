@@ -13,6 +13,10 @@
   with_items: "{{ homebrew_cask_packages }}"
   tags: packages
 
+- name: install / update vim-hcl syntax plugin (https://github.com/jvirtanen/vim-hcl/tree/master/syntax)
+  ansible.builtin.script: "{{ script_common_install_vim_hcl_syntax }}"
+  tags: packages
+
 - name: copy common nix configurations
   ansible.builtin.copy: 
     src: "{{ item }}"
@@ -35,7 +39,7 @@
     executable: /bin/zsh
 
 - name: add all spaces required for yabai + skhd
-  ansible.builtin.script: "{{ macos_create_spaces_script }}"
+  ansible.builtin.script: "{{ script_macos_create_spaces }}"
   args:
     executable: osascript
   tags: spaces

@@ -21,4 +21,5 @@ macos_configs:
 - configs/macos/.skhdrc
 - configs/macos/.yabairc
 
-macos_create_spaces_script: create_spaces.scpt
+script_common_install_vim_hcl_syntax: scripts/common/install_vim_hcl_syntax.sh
+script_macos_create_spaces: scripts/macos/create_spaces.scpt
