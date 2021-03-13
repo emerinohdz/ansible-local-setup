@@ -13,8 +13,8 @@
   with_items: "{{ homebrew_cask_packages }}"
   tags: packages
 
-- name: install / update vim-hcl syntax plugin (https://github.com/jvirtanen/vim-hcl/tree/master/syntax)
-  ansible.builtin.script: "{{ script_common_install_vim_hcl_syntax }}"
+- name: install vim-terraform plugin (https://github.com/hashivim/vim-terraform)
+  ansible.builtin.script: "{{ script_common_install_vim_terraform_plugin }}"
   tags: packages
 
 - name: copy common nix configurations

@@ -21,5 +21,5 @@ macos_configs:
 - configs/macos/.skhdrc
 - configs/macos/.yabairc
 
-script_common_install_vim_hcl_syntax: scripts/common/install_vim_hcl_syntax.sh
+script_common_install_vim_terraform_plugin: scripts/common/install_vim_terraform_plugin.sh
 script_macos_create_spaces: scripts/macos/create_spaces.scpt
