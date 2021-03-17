@@ -14,4 +14,3 @@ configs:
 packages:
 	ansible-playbook playbook.yml --tags packages
 
-# vim: autoindent noexpandtab tabstop=4 shiftwidth=4

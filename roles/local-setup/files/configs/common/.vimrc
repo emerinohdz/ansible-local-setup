@@ -29,6 +29,7 @@ filetype on
 autocmd FileType C set makeprg=make <CR>
 autocmd FileType python set expandtab
 autocmd FileType tf set shiftwidth=2 tabstop=2 softtabstop=2 autoindent smarttab
+autocmd FileType make set autoindent noexpandtab tabstop=4 shiftwidth=4
 nmap <F9> :make <CR>
 "nmap <F11> :set makeprg=javac\ *.java <CR>
 "nmap <C-A> :cprev <CR>
