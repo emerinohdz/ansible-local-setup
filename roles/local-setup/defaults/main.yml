@@ -4,6 +4,7 @@ homebrew_cask_packages:
 - itsycal
 - spotify
 - intellij-idea-ce
+- visual-studio-code
 
 homebrew_cmd_packages:
 - tmux
