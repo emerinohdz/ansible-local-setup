@@ -162,3 +162,6 @@ if exists percol; then
     zle -N percol_select_history
     bindkey '^R' percol_select_history
 fi
+
+# DIS-ZSHRC-INCLUDES
+[ -d ~/.zshrc_includes ] && source ~/.zshrc_includes/*
