@@ -4,6 +4,7 @@ homebrew_cask_packages:
 - spotify
 - intellij-idea-ce
 - visual-studio-code
+- scroll-reverser
 
 homebrew_cmd_packages:
 - tmux
