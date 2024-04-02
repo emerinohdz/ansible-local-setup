@@ -1,4 +1,11 @@
 ---
+- name: install yabai and skhd
+  ansible.builtin.command: brew install {{ item }}
+  with_items:
+    - koekeishiya/formulae/yabai
+    - koekeishiya/formulae/skhd
+  tags: packages
+
 - name: install homebrew command line packages
   community.general.homebrew:
     name: "{{ item }}"

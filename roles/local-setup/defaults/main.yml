@@ -11,8 +11,6 @@ homebrew_cmd_packages:
 - htop
 - zplug
 - jq
-- koekeishiya/formulae/yabai
-- koekeishiya/formulae/skhd
 
 common_nix_configs:
 - configs/common/.tmux.conf
