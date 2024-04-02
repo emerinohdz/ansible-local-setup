@@ -37,8 +37,9 @@
     dest: "$HOME/"
   with_items: "{{ macos_configs }}"
   tags: configs
-  notify:
-  - restart brew services
+  notify: 
+    - restart skhd
+    - restart yabai
 
 - name: fix ZSH files to avoid compaudit warnings (see https://github.com/zsh-users/zsh-completions/issues/680)
   ansible.builtin.shell: compaudit | xargs chmod g-w
@@ -54,5 +55,12 @@
 - name: disable spaces MRU behavior
   ansible.builtin.shell: |
     defaults write com.apple.dock mru-spaces -bool false
-    killall Dock
+  notify: restart dock
   tags: spaces
+
+- name: set keyboard rate repeat settings
+  ansible.builtin.shell: |
+    defaults write -g InitialKeyRepeat -int 15
+    defaults write -g KeyRepeat -int 2
+  notify: restart dock
+  tags: keyboard

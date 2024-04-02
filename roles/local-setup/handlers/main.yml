@@ -1,6 +1,9 @@
 ---
-- name: restart brew services
-  ansible.builtin.command: brew services restart "{{ item }}"
-  with_items:
-    - skhd
-    - yabai
+- name: restart skhd 
+  ansible.builtin.command: skhd --restart-service
+
+- name: restart yabai 
+  ansible.builtin.command: yabai --restart-service
+
+- name: restart dock
+  ansible.builtin.command: killall Dock
