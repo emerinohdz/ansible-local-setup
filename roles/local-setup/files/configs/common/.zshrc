@@ -165,3 +165,5 @@ fi
 
 # DIS-ZSHRC-INCLUDES
 [ -d ~/.zshrc_includes ] && source ~/.zshrc_includes/*
+
+eval "$(direnv hook zsh)"

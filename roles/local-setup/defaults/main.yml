@@ -11,11 +11,15 @@ homebrew_cmd_packages:
 - htop
 - zplug
 - jq
+- direnv
+- colima
 
 common_nix_configs:
 - configs/common/.tmux.conf
 - configs/common/.vimrc
 - configs/common/.zshrc
+- configs/common/.config
+- configs/common/.direnvrc
 
 macos_configs:
 - configs/macos/.skhdrc
