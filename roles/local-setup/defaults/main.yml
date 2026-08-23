@@ -13,6 +13,7 @@ homebrew_cmd_packages:
 - jq
 - direnv
 - colima
+- docker
 
 common_nix_configs:
 - configs/common/.tmux.conf
