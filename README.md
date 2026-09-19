@@ -2,12 +2,13 @@
 
 Ansible playbook and role to bootstrap setup of local machines with packages and configurations.
 
-## Requirements
+## Install requirements
 
 > NOTE: For now, it only supports macOS systems, pending support for linux distros.
 
-- Homebrew
-- Ansible
+Run the following command to install the requirements for this project:
+
+    make install-requirements
 
 ## Install packages and copy configurations
 

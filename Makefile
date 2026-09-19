@@ -3,7 +3,7 @@
 default: install-requirements run
 
 install-requirements:
-	ansible-galaxy install -r requirements.yml
+	./scripts/install_requirements.sh
 
 run: 
 	ansible-playbook playbook.yml
@@ -13,4 +13,3 @@ configs:
 
 packages:
 	ansible-playbook playbook.yml --tags packages -v
-
