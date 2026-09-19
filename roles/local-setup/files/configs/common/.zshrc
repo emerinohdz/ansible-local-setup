@@ -125,26 +125,29 @@ colors
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+# Used by Zsh completion (and GNU-compatible ls when available).
+export LS_COLORS='di=38;2;189;147;249:ln=38;2;139;233;253:ex=38;2;80;250;123:*.tar=38;2;255;121;198:*.gz=38;2;255;121;198:*.zip=38;2;255;121;198'
 
-export red=$'%{\e[0;31m%}'
-export RED=$'%{\e[1;31m%}'
-export green=$'%{\e[0;32m%}'
-export GREEN=$'%{\e[1;32m%}'
-export blue=$'%{\e[0;34m%}'
-export BLUE=$'%{\e[1;34m%}'
-export purple=$'%{\e[0;35m%}'
-export PURPLE=$'%{\e[1;35m%}'
-export cyan=$'%{\e[0;36m%}'
-export CYAN=$'%{\e[1;36m}'
-export WHITE=$'%{\e[1;37m}'
-export white=$'%{\e[0;37m}'
+# Dracula-inspired truecolor prompt palette.
+export red=$'%{\e[38;2;255;85;85m%}'
+export RED=$'%{\e[38;2;255;110;110m%}'
+export green=$'%{\e[38;2;80;250;123m%}'
+export GREEN=$'%{\e[38;2;105;255;148m%}'
+export blue=$'%{\e[38;2;98;114;164m%}'
+export BLUE=$'%{\e[38;2;139;233;253m%}'
+export purple=$'%{\e[38;2;189;147;249m%}'
+export PURPLE=$'%{\e[38;2;255;121;198m%}'
+export cyan=$'%{\e[38;2;139;233;253m%}'
+export CYAN=$'%{\e[38;2;139;233;253m%}'
+export WHITE=$'%{\e[38;2;248;248;242m%}'
+export white=$'%{\e[38;2;248;248;242m%}'
 export NC=$'%{\e[0m%}'
-export yellow=$'%{\e[0;33m%}'
-export YELLOW=$'%{\e[1;33m%}'
+export yellow=$'%{\e[38;2;241;250;140m%}'
+export YELLOW=$'%{\e[38;2;241;250;140m%}'
 
 PROMPT='${YELLOW}%n ${purple}at ${YELLOW}%m ${purple}in ${cyan}%~ 
 $(gitprompt)${purple}> '
-RPROMPT=" ${NC}%B[%T]%b"
+RPROMPT=" ${WHITE}%B[%T]%b${NC}"
 
 #bindkey '^R' history-incremental-search-backward
 
