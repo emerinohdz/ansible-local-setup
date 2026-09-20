@@ -2,7 +2,6 @@ homebrew_cask_packages:
 - iterm2
 - itsycal
 - spotify
-- intellij-idea-ce
 - visual-studio-code
 - scroll-reverser
 
